@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+p {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 0px;
+  color: white;
+  background-color: white (0, 0, 0, 0.5); /* Black w/opacity/see-through */
+  right: 150px;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+
+} 
+
+.container {
+  position: relative;
+  text-align: center;
+  
+}
+
+
+/* Top right text */
+.top-right {
+  font-family: 'Bungee Outline';font-size: 25px;
+  font-weight: bold;
+  color: white;
+  background-color: white (0, 0, 0, 0.5); /* Black w/opacity/see-through */
+  position: absolute;
+  top: 8px;
+  right: 150px;
+
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bungee Outline';font-size: 60px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid  #0f9420;
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  padding: 5px;
+  text-align: center;
+}
+
+
+/* Style the body */
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+
+ 
+/* media queries which will only be activated at specific screen sizes */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: none;
+  }
+
+
+  }
+
+</style>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+
+
+
+</head>
+<body>
+ 
+
+  
+    <img src="ufo_forest_green.webp" alt="ufo" class="responsive"> 
+    <div class="top-right">World UFO Day <p id="demo"></p></div> 
+      <script src="counter.js"></script>
+      
+    <div class="centered">UFO Sightings</div>
+  </div> 
+
+<div class="container">
+  <h1 class="text-center"> UFO Sightings Database</h1>
+
+    <div class="row">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Date/Time</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Shape</th>
+            <th scope="col">Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">3321</th>
+            <td>Patty</td>
+            <td>T-Shirt</td>
+            <td>20.99</td>
+            <td>2/13/18</td>
+            <td>2/13/18</td>
+          </tr>
+          <tr>
+            <th scope="row">4456</th>
+            <td>Charles</td>
+            <td>Shorts</td>
+            <td>34.99</td>
+            <td>3/31/16</td>
+            <td>2/13/18</td>
+          </tr>
+          <tr class="danger">
+            <th scope="row">7329</th>
+            <td>Cindy</td>
+            <td>Backpack</td>
+            <td>45.00</td>
+            <td>4/4/15</td>
+            <td>2/13/18</td>
+          </tr>
+          <tr>
+            <th scope="row">8211</th>
+            <td>Kate</td>
+            <td>Socks</td>
+            <td>12</td>
+            <td>10/21/17</td>
+            <td>2/13/18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+      </div>
+</body>
+</html>
