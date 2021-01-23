@@ -20,3 +20,4 @@ data.forEach(function(ufo_sightings) {
         cell.text(value);
     });
 });
+
