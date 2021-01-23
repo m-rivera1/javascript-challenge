@@ -23,10 +23,10 @@
 var dataTable = data;
 
 // Select the button
-var button = d3.select("#button");
+var button = d3.selectAll("#button");
 
 // Select the form
-var form = d3.select("#form");
+var form = d3.selectAll("#form");
 
 // Create event handlers 
 button.on("click", runEnter);
@@ -51,11 +51,14 @@ function runEnter() {
 
   console.log(filteredData); 
 
+
   /*d3.select("tbody").text(filteredData); */
 
 //  This data copied over from app.js and modified to try to populate filtered data to the page
   // use D3 to select the table body and create a variable for it
    var tbody = d3.select("tbody");
+
+   tbody.html("");
 
    filteredData.forEach(function(ufo_sightings) {
     console.log(ufo_sightings);  //--just to check the data
@@ -63,13 +66,13 @@ function runEnter() {
     //create variable to be used to append to each table row
       var row = tbody.append("tr");
     //cycling through each object in the array key and value 
-      Object.entries(ufo_sightings).forEach(function([key, value]) {
-        console.log(key, value); // -- just to check data
+      Object.entries(ufo_sightings).forEach(function(rowValue) {
+          console.log(rowValue); // -- just to check data
         //append table data to each table row
           var cell = row.append("td");
         //grab the text values
-          cell.text(value);
-          console.log(cell);
+          cell.text(rowValue);
+          console.log(rowValue);
         });
     });
 }
