@@ -52,12 +52,14 @@ function runEnter() {
   console.log(filteredData); 
 
 
+
   /*d3.select("tbody").text(filteredData); */
 
 //  This data copied over from app.js and modified to try to populate filtered data to the page
   // use D3 to select the table body and create a variable for it
    var tbody = d3.select("tbody");
 
+   // to clear the table body before insterting sorted data or else new data will append to the end of table
    tbody.html("");
 
    filteredData.forEach(function(ufo_sightings) {
@@ -66,13 +68,13 @@ function runEnter() {
     //create variable to be used to append to each table row
       var row = tbody.append("tr");
     //cycling through each object in the array key and value 
-      Object.entries(ufo_sightings).forEach(function(rowValue) {
-          console.log(rowValue); // -- just to check data
+      Object.entries(ufo_sightings).forEach(function([key, value]) {
+          console.log(value); // -- just to check data
         //append table data to each table row
           var cell = row.append("td");
         //grab the text values
-          cell.text(rowValue);
-          console.log(rowValue);
+          cell.text(value);
+          console.log(value);
         });
     });
 }
