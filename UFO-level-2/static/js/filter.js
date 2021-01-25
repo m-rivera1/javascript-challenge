@@ -24,18 +24,13 @@ function runEnter() {
   var inputState = d3.select("#state");
   var inputCountry = d3.select("#country");
   var inputShape = d3.select("#shape");
-  var inputDuration = d3.select("#durationMinutes");
-  var inputComments = d3.select("#comments");
-
-  //console.log(inputDate, inputCity, inputCountry, inputState, inputShape, inputDuration, inputComments);
-  
-
+ 
   // Get the value property of the input element
   var dateValue = inputDate.property("value");
   var cityValue = inputCity.property("value");
-  // var stateValue = inputState.property("value");
-  // var countryValue = inputCountry.property("value");
-  // var shapeValue = inputShape.property("value");
+  var stateValue = inputState.property("value");
+  var countryValue = inputCountry.property("value");
+  var shapeValue = inputShape.property("value");
 
   
   // if-Else loop to determine which input value to filter by
@@ -44,9 +39,8 @@ function runEnter() {
     var filteredData = dataTable.filter(date => date.datetime === dateValue);
 
     // ****placeholder- clear table and load filtered data into table***
-    
-
-
+    console.log(dateValue);
+    fillTable(filteredData);
   }
 
   else if(cityValue) {
@@ -57,45 +51,33 @@ function runEnter() {
      fillTable(filteredData);
  }
 
-  //else (inputState) {
-    //var filteredData = dataTable.filter(state => state.state === inputState);
+  else if (stateValue) {
+    var filteredData = dataTable.filter(state => state.state === stateValue);
 
     // ****placeholder- clear table and load filtered data into table***
-    //console.log(dateValue);
+    console.log(stateValue);
+    fillTable(filteredData);
 
-  //}
+  }
   
-  // else if(inputCountry) {
-  //   var filteredData = dataTable.filter(country => country.country === inputCountry);
+  else if(countryValue) {
+    var filteredData = dataTable.filter(country => country.country === countryValue);
 
   //   // ****placeholder- clear table and load filtered data into table***
-  //   console.log(inputDate, inputCity, inputCountry, inputState, inputShape, inputDuration, inputComments);
+    console.log(countryValue);
+    fillTable(filteredData);
 
-  // }
+   }
 
-  // else if(inputShape) {
-  //   var filteredData = dataTable.filter(shape => shape.shape === inputShape);
-
-  //   // ****placeholder- clear table and load filtered data into table***
-  //   console.log(inputDate, inputCity, inputCountry, inputState, inputShape, inputDuration, inputComments);
-
-  // }
-
-  // else if(inputDuration) {
-  //   var filteredData = dataTable.filter(duration => duration.duration === inputDuration);
+  else if(shapeValue) {
+    var filteredData = dataTable.filter(shape => shape.shape === shapeValue);
 
   //   // ****placeholder- clear table and load filtered data into table***
-  //   console.log(inputDate, inputCity, inputCountry, inputState, inputShape, inputDuration, inputComments);
+    console.log(shapeValue);
+    fillTable(filteredData);
 
-  // }
-  
-  // else (inputComments) {
-  //   var filteredData = dataTable.filter(comments => comments.comments === inputComments);
+  }
 
-  //   // ****placeholder- clear table and load filtered data into table***
-  //   console.log(inputDate, inputCity, inputCountry, inputState, inputShape, inputDuration, inputComments);
-
-  // }
   
 function fillTable()  {
   // use D3 to select the table body and create a variable for it
