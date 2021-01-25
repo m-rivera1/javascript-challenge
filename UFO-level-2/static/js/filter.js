@@ -27,103 +27,56 @@ function runEnter() {
  
   // Get the value property of the input element
   var dateValue = inputDate.property("value");
-  var cityValue = inputCity.property("value");
-  var stateValue = inputState.property("value");
-  var countryValue = inputCountry.property("value");
-  var shapeValue = inputShape.property("value");
+  var cityValue = inputCity.property("value").toLowerCase();
+  var stateValue = inputState.property("value").toLowerCase();
+  var countryValue = inputCountry.property("value").toLowerCase();
+  var shapeValue = inputShape.property("value").toLowerCase();
 
   
   // if-Else loop to determine which input value to filter by
 
   if(dateValue) {
     var filteredData = dataTable.filter(date => date.datetime === dateValue);
-
-    // ****placeholder- clear table and load filtered data into table***
-    console.log(dateValue);
     fillTable(filteredData);
   }
 
   else if(cityValue) {
      var filteredData = dataTable.filter(city => city.city === cityValue);
-
-  //   // ****placeholder- clear table and load filtered data into table***
-     console.log(cityValue);
      fillTable(filteredData);
  }
 
   else if (stateValue) {
     var filteredData = dataTable.filter(state => state.state === stateValue);
-
-    // ****placeholder- clear table and load filtered data into table***
-    console.log(stateValue);
     fillTable(filteredData);
 
   }
   
   else if(countryValue) {
     var filteredData = dataTable.filter(country => country.country === countryValue);
-
-  //   // ****placeholder- clear table and load filtered data into table***
-    console.log(countryValue);
     fillTable(filteredData);
 
    }
 
   else if(shapeValue) {
     var filteredData = dataTable.filter(shape => shape.shape === shapeValue);
-
-  //   // ****placeholder- clear table and load filtered data into table***
-    console.log(shapeValue);
     fillTable(filteredData);
 
   }
 
+// callable function to add the filtered search results to the html table
   
 function fillTable()  {
-  // use D3 to select the table body and create a variable for it
+
   var tbody = d3.select("tbody");
-  // to clear the table body before insterting sorted data or else new data will append to the end of table
+ 
   tbody.html("");
      
   filteredData.forEach(function(ufo_sightings) {
-  console.log(ufo_sightings);  //--just to check the data
-         
-  //create variable to be used to append to each table row
-  var row = tbody.append("tr");
-  //cycling through each object in the array key and value 
-  Object.entries(ufo_sightings).forEach(function([key, value]) {
-  console.log(value); // -- just to check data
-  //append table data to each table row
-  var cell = row.append("td");
-  //grab the text values
-  cell.text(value);
-  console.log(value);
-   });
-  });    
+    var row = tbody.append("tr");
+    Object.entries(ufo_sightings).forEach(function([key, value]) {
+    var cell = row.append("td");
+    cell.text(value);
+    });
+    });    
+  }
 }
-
- 
-
-
-  // // use D3 to select the table body and create a variable for it
-  //  var tbody = d3.select("tbody");
-
-  //  // to clear the table body before insterting sorted data or else new data will append to the end of table
-  //  tbody.html("");
-
-  //  filteredData.forEach(function(ufo_sightings) {
-  //   console.log(ufo_sightings);  //--just to check the data
-   
-  //   //create variable to be used to append to each table row
-  //     var row = tbody.append("tr");
-  //   //cycling through each object in the array key and value 
-  //     Object.entries(ufo_sightings).forEach(function([key, value]) {
-  //         console.log(value); // -- just to check data
-  //       //append table data to each table row
-  //         var cell = row.append("td");
-  //       //grab the text values
-  //         cell.text(value);
-  //         console.log(value);
-  //       });
-   //  });
- }

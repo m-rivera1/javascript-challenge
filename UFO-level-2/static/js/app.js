@@ -1,4 +1,5 @@
-// from data.js
+//  code below will do the inital load of all the data to the html table
+// from data.js 
 var tableData = data;
 
 // use D3 to select the table body and create a variable for it
