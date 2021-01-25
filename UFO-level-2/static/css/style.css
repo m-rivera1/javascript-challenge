@@ -91,8 +91,10 @@
   background-color: #0f9420;
 }
 
-.filters .panel-body {
+.panel-body {
   padding: 0;
+  width: 20%;
+  
 }
 
 .filters {
