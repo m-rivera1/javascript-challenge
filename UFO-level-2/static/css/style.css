@@ -1,6 +1,4 @@
-* /* {
-  box-sizing: border-box;
-} */
+
 
 /*The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
@@ -91,6 +89,7 @@
   background-color: #0f9420;
 }
 
+
 .panel-body {
   padding: 0;
   width: 20%;
@@ -99,20 +98,25 @@
 
 .filters {
   margin-top: 10px;
+  
 }
 
 .filter-btn {
 outline-style: auto;
 color: forestgreen;
+
 }
+
 
 .panel-body {
   font-weight: bold;
+  float: left;
 }
 .table, th, td {
     border: 1px solid black;
     border-collapse: separate;
     background-color: ghostwhite;
+  
 }
 .form-group {
   border: 3px solid  black;
