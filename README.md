@@ -62,4 +62,4 @@ You can handle this... right? The planet Earth needs to know what we have found!
 
 ## Dataset
 
-UFO Sightings Data
+<a href="https://github.com/m-rivera1/javascript-challenge/blob/main/UFO-level-1/static/js/data.js">UFO Sightings Data</a>
