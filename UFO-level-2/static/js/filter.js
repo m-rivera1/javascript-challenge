@@ -3,7 +3,7 @@
 var dataTable = data;
 
 // Select the button
-var button = d3.selectAll("#filter-btn");
+var button = d3.selectAll("#aside");
 
 // Select the form
 var form = d3.selectAll("#form");

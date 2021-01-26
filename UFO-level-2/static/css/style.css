@@ -1,15 +1,15 @@
 
 
-/*The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+/*The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page 
 .wrapper {
   position: relative;
   min-height: 100%;
   padding-bottom: 130px;
   overflow: auto;
-  background-color: #0f9420;
-} 
+  background-color: #0f9420; 
+} */
 
-/* The footer is positioned at the bottom of the page */
+/* The footer is positioned at the bottom of the page 
 .footer {
   position: absolute;
   right: 0;
@@ -17,17 +17,17 @@
   left: 0;
   min-height: 100px;
   background: #0f9420;
-}
+}  */
 
-/* The code styles the text at the bottom of the footer */
+/* The code styles the text at the bottom of the footer 
 .footer > .bottom {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 5px;
-  background:  #0f9420; 
-}
+  background:  #111111; 
+}  */
 
 .p {
   text-align: right;
@@ -42,11 +42,14 @@
   height: auto;
 
 } 
-
+/*
 .container {
+  justify-content: space-evenly;
+} */
+.counter-title {
   position: -webkit-sticky;
   text-align: center;
-  background-color: #57aa62; 
+  background-color: #57aa62;
 }
 
 
@@ -93,6 +96,10 @@
 .panel-body {
   padding: 0;
   width: 20%;
+  float: left; 
+  text-align: center;
+  color:#0f9420
+
   
 }
 
@@ -104,14 +111,20 @@
 .filter-btn {
 outline-style: auto;
 color: forestgreen;
-
 }
 
+aside {
+  
+  float: center;
+  
+  background-color: lightgray;
+}
 
+/*
 .panel-body {
   font-weight: bold;
-  float: left;
-}
+  float: left; 
+} */
 .table, th, td {
     border: 1px solid black;
     border-collapse: separate;
@@ -125,6 +138,30 @@ color: forestgreen;
   border: 3px solid  black;
  }
 
+ .btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+ /*float: left; /* Float the buttons side by side */
+  /*display: table; */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -158,4 +195,5 @@ color: forestgreen;
   }
 
 
-  }
+}
+}

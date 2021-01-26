@@ -15,17 +15,12 @@
 </head>
 <body>
  
-
-  
-    <img src="static/images/ufo_forest_green.png" alt="ufo" class="responsive"> 
-    <div class="top-right">World UFO Day <p id="counter-title"></p></div> 
-      <script src="static/js/counter.js"></script>
-      
-    <div class="centered">UFO Sightings Database</div>
-  </div> 
-
-  <div class="d-flex flex-row mb-6">
-    <div class="panel panel-success">
+<img src="static/images/ufo_forest_green.png" alt="ufo" class="responsive"> 
+<div class="top-right">World UFO Day <p id="counter-title"></p></div> 
+<script src="static/js/counter.js"></script>
+<div class="centered">UFO Sightings Database</div>
+<div class="container">
+  <div class="panel panel-success">
       <div class="panel-body">
         <form id="form">
           <div class="form-group">
@@ -62,7 +57,14 @@
                   </li>
                 </ul>
               </div>
+            <!----  <div class="btn-group">
+                <div class="d-flex justify-content-right">
+                <button>Filter Table</button>
+                <button>Reset Search Fields</button>
+              </div>  
+              </div>
               <button id="filter-btn" type="button" class="btn btn-success">Filter Table</button>
+              <button id="filter-btn" type="button" class="btn btn-success">Reset Search Fields</button>  <!---->
             </form>
           </div>
           <div class="panel panel-success">
@@ -90,13 +92,24 @@
                     </ul>
                   </div>
                 </form>
+                </div>
               </div>
+            </div>     
+          </div>
         </div>
-      </div>
-      <br>
+        </div>
+      
+<br>
+<br>
     <div class = row>
       <table class="table table-hover" id="myTable">
         <thead>
+
+          <aside>
+            <div class="btn-group">
+            <button type="button">Filter Table</button>
+            <button type="button">Reset Search Fields</button>
+          </aside>
           <tr>
             <th scope="col">Date/Time</th>
             <th scope="col">City</th>
@@ -109,7 +122,8 @@
         </thead>
         <tbody></tbody>
       </table>
-    </div>
+      </div>
+     </div>
   </div>
 </div>
 </body>
