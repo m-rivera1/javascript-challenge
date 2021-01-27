@@ -9,25 +9,6 @@
   background-color: #0f9420; 
 } */
 
-/* The footer is positioned at the bottom of the page 
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  min-height: 100px;
-  background: #0f9420;
-}  */
-
-/* The code styles the text at the bottom of the footer 
-.footer > .bottom {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 5px;
-  background:  #111111; 
-}  */
 
 .p {
   text-align: right;
@@ -42,10 +23,10 @@
   height: auto;
 
 } 
-/*
+
 .container {
-  justify-content: space-evenly;
-} */
+  background-color: black;
+} 
 .counter-title {
   position: -webkit-sticky;
   text-align: center;
@@ -84,84 +65,66 @@
   text-align: center;
 }
 
-
-/* Style the body */
-.body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background-color: #0f9420;
-}
-
-
 .panel-body {
   padding: 0;
   width: 20%;
-  float: left; 
+  float: left; /* search fields horizontal */
   text-align: center;
-  color:#0f9420
-
-  
+  color: black;
+    
 }
 
-.filters {
-  margin-top: 10px;
-  
-}
 
 .filter-btn {
 outline-style: auto;
 color: forestgreen;
 }
 
-aside {
-  
-  float: center;
-  
-  background-color: lightgray;
-}
 
-/*
-.panel-body {
-  font-weight: bold;
-  float: left; 
-} */
 .table, th, td {
     border: 1px solid black;
     border-collapse: separate;
-    background-color: ghostwhite;
-  
+    background-color: #50df63;
+    margin-left: 100px;
+    margin-right: auto; 
+    text-align: center;
+        
+   /* background-color: ghostwhite; */
 }
+
 .form-group {
   border: 3px solid  black;
+  
  }
+ /*
  .filter-btn {
   border: 3px solid  black;
- }
+ }  */
 
  .btn-group button {
   background-color: #4CAF50; /* Green background */
   border: 1px solid green; /* Green border */
-  color: white; /* White text */
+  color: black; /* black text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
- /*float: left; /* Float the buttons side by side */
+  /*float: left; /* Float the buttons side by side */
   /*display: table; */
 }
-
+/*
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
+  border-right: none; /* Prevent double borders 
+} */
 
-/* Clear floats (clearfix hack) */
+/* Clear floats (clearfix hack) 
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 /* Add a background color on hover */
 .btn-group button:hover {
-  background-color: #3e8e41;
+  background-color: red;
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -194,6 +157,13 @@ aside {
     display: none;
   }
 
+  /
+  .center {
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: Center;
+        
+  } */
 
 }
 }

@@ -8,6 +8,7 @@ var button = d3.selectAll("#filter-btn");
 // Select the form
 var form = d3.selectAll("#form");
 
+
 // Create event handlers 
 button.on("click", runEnter);
 form.on("submit",runEnter);

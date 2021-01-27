@@ -3,13 +3,14 @@
 var dataTable = data;
 
 // Select the button
-var button = d3.selectAll("#aside");
+var button = d3.selectAll("#button");
 
 // Select the form
 var form = d3.selectAll("#form");
 
 // Create event handlers 
 button.on("click", runEnter);
+//button.on("click", this.form.reset());
 form.on("submit",runEnter);
 
 // Complete the event handler function for the form
